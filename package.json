@@ -1,19 +1,23 @@
 {
-  "name": "bitcore-build",
+  "name": "litecore-build",
   "version": "0.5.4",
-  "description": "A helper for common tasks to build bitcore modules'",
+  "description": "A helper for common tasks to build litecore modules'",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bitpay/bitcore-build"
+    "url": "git://github.com/litecoin-project/litecore-build"
   },
   "keywords": [
-    "bitcore"
+    "litecore"
   ],
   "contributors": [
+    {
+      "name": "Charlie Lee",
+      "email": "coblee@litecoin.org"
+    },
     {
       "name": "Esteban Ordano",
       "email": "esteban@bitpay.com"
@@ -33,9 +37,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-build/issues"
+    "url": "https://github.com/litecoin-project/litecore-build/issues"
   },
-  "homepage": "https://github.com/bitpay/bitcore-build",
+  "homepage": "https://github.com/litecoin-project/litecore-build",
   "dependencies": {
     "brfs": "^1.2.0",
     "browserify": "~13.1.0",
