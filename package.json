@@ -1,6 +1,6 @@
 {
   "name": "litecore-build",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A helper for common tasks to build litecore modules'",
   "main": "index.js",
   "scripts": {
