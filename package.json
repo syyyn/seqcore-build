@@ -1,17 +1,17 @@
 {
-  "name": "litecore-build",
+  "name": "seqcore-build",
   "version": "0.5.5",
-  "description": "A helper for common tasks to build litecore modules'",
+  "description": "A helper for common tasks to build seqcore modules'",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/litecoin-project/litecore-build"
+    "url": "git://github.com/syyyn/seqcore-build"
   },
   "keywords": [
-    "litecore"
+    "seqcore"
   ],
   "contributors": [
     {
@@ -33,13 +33,17 @@
     {
       "name": "Yemel Jardi",
       "email": "yemel@bitpay.com"
+    },
+    {
+      "name": "syyyn",
+      "email": "syn@synister.dev"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/litecoin-project/litecore-build/issues"
+    "url": "https://github.com/syyyn/seqcore-build/issues"
   },
-  "homepage": "https://github.com/litecoin-project/litecore-build",
+  "homepage": "https://github.com/syyyn/seqcore-build",
   "dependencies": {
     "brfs": "^1.2.0",
     "browserify": "~13.1.0",
