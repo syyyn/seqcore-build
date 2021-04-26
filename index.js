@@ -17,8 +17,8 @@
  * </ul>`
  * <li> `browser` - generate files needed for browser (browserify)
  * <ul>
- * <li> `browser:uncompressed` - build uncomprssed browser bundle (`litecore-*.js`)
- * <li> `browser:compressed` - build compressed browser bundle (`litecore-*.min.js`)
+ * <li> `browser:uncompressed` - build uncomprssed browser bundle (`seqcore-*.js`)
+ * <li> `browser:compressed` - build compressed browser bundle (`seqcore-*.min.js`)
  * <li> `browser:maketests` - build `tests.js`, needed for testing without karma
  * </ul>`
  * <li> `lint` - run `jshint`
@@ -44,7 +44,7 @@ var bump = require('gulp-bump');
 var git = require('gulp-git');
 
 function ignoreerror() {
-  /* jshint ignore:start */ // using `this` in this context is weird 
+  /* jshint ignore:start */ // using `this` in this context is weird
   this.emit('end');
   /* jshint ignore:end */
 }
@@ -53,12 +53,12 @@ function startGulp(name, opts) {
 
   opts = opts || {};
   var browser = !opts.skipBrowser;
-  var fullname = name ? 'litecore-' + name : 'litecore';
+  var fullname = name ? 'seqcore-' + name : 'seqcore';
   var files = ['lib/**/*.js'];
   var tests = ['test/**/*.js'];
   var alljs = files.concat(tests);
 
-  var buildPath = './node_modules/litecore-build/';
+  var buildPath = './node_modules/seqcore-build/';
   var buildModulesPath = buildPath + 'node_modules/';
   var buildBinPath = buildPath + 'node_modules/.bin/';
 
@@ -102,9 +102,9 @@ function startGulp(name, opts) {
     var browserifyCommand;
 
     if (name !== 'lib') {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external litecore-lib -o ' + fullname + '.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external seqcore-lib -o ' + fullname + '.js';
     } else {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:litecore-lib -o litecore-lib.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:seqcore-lib -o seqcore-lib.js';
     }
 
     gulp.task('browser:uncompressed', shell.task([
@@ -325,7 +325,7 @@ function startGulp(name, opts) {
       bumper,
       // build browser files
       browser ? 'browser' : 'noop',
-      // Commit 
+      // Commit
       'release:build-commit',
       // Run git push litecoin-project $VERSION
       'release:push-tag',
